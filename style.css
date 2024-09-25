@@ -335,7 +335,6 @@ nav ul li a:hover {
     background-color: #e67e22;
   }
   
-  
   @media (max-width: 768px) {
     .product-grid {
         grid-template-columns: repeat(2, 1fr); /* Mỗi hàng 2 sản phẩm trên màn hình nhỏ hơn */
@@ -420,18 +419,89 @@ nav ul li a:hover {
     margin: 0;
 }
 
-/* Responsive adjustments */
+/* Style for the navigation bar */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    color: black;
+}
+
+/* Contact Button Style */
+.contact-link {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.contact-link:hover {
+    background-color: #ff4a3d;
+}
+
+/* Responsive: Hamburger menu for mobile */
+.menu-toggle {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+}
+
+/* Hide menu on smaller screens (mobile) */
 @media (max-width: 768px) {
-    .footer .container {
+    nav ul {
+        display: none;
         flex-direction: column;
+        width: 100%;
     }
 
-    .footer-column {
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
         width: 100%;
-        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 15px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    /* Full-width contact button on mobile */
+    .contact-link {
+        width: 100%;
+        margin: 0;
     }
 }
-/* Cài đặt cho màn hình nhỏ hơn (ví dụ: iPhone 13) */
+
+
+
 @media (max-width: 480px) {
     /* Header */
     .company-name h1 {
@@ -460,14 +530,9 @@ nav ul li a:hover {
     /* Banner */
     .banner h2 {
         font-size: 24px;
-        margin-bottom: 10px;
     }
 
-    .banner p {
-        font-size: 16px;
-    }
-
-    /* Section "Company Introduction" */
+    /* Company Introduction */
     .company-introduction {
         padding: 20px 0;
     }
@@ -479,25 +544,21 @@ nav ul li a:hover {
 
     .intro-icon {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     .intro-text {
         margin-left: 0;
     }
 
-    /* Section "Products" */
-    .products h2 {
-        font-size: 22px;
-    }
-
-    .product {
-        flex: 1 0 90%; /* Hiển thị 1 sản phẩm trên màn hình nhỏ */
+    /* Products */
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr); /* Mỗi hàng 1 sản phẩm */
     }
 
     /* Footer */
     .footer-column {
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 }

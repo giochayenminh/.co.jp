@@ -106,7 +106,7 @@ h1 {
 
 .company-name h1 {
     font-size: 24px;
-    color: #004B87;
+    color: #2b5b17;
     margin-bottom: 5px;
 }
 
@@ -137,12 +137,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #004B87;
+    color: #2b5b17;
 }
 
 /* Contact Button */
 .contact-button .contact-link {
-    background-color: #004B87;
+    background-color: #ff6f61;
     color: white;
     padding: 10px 16px;
     text-decoration: none;
@@ -151,7 +151,7 @@ nav ul li a:hover {
 }
 
 .contact-button .contact-link:hover {
-    background-color: #003060;
+    background-color: #ff4a3d;
 }
 
 
@@ -229,15 +229,84 @@ nav ul li a:hover {
     margin: 0;
 }
 
-/* Responsive adjustments */
+/* Style for the navigation bar */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    color: black;
+}
+
+/* Contact Button Style */
+.contact-link {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.contact-link:hover {
+    background-color: #ff4a3d;
+}
+
+/* Responsive: Hamburger menu for mobile */
+.menu-toggle {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+}
+
+/* Hide menu on smaller screens (mobile) */
 @media (max-width: 768px) {
-    .footer .container {
+    nav ul {
+        display: none;
         flex-direction: column;
+        width: 100%;
     }
 
-    .footer-column {
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
         width: 100%;
-        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 15px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    /* Full-width contact button on mobile */
+    .contact-link {
+        width: 100%;
+        margin: 0;
     }
 }
 /* Cài đặt cho màn hình nhỏ hơn (ví dụ: iPhone 13) */
@@ -336,6 +405,6 @@ nav ul li a:hover {
     content: "";
     display: block;
     width: 100px; /* Độ dài đường kẻ */
-    border-bottom: 3px solid #0072bc; /* Màu xanh và độ dày của đường kẻ */
+    border-bottom: 3px solid #489627; /* Màu xanh và độ dày của đường kẻ */
     margin-top: 5px;
 }
